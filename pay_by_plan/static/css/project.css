@@ -1,0 +1,74 @@
+:root {
+  --primary-color: #008cba;
+  --secondary-color: #ffc107;
+  --text-color: #333;
+  --bg-color: #F5F5F5;
+  --light-gray: #e0e0e0;
+  --dark-gray: #6c757d;
+}
+
+/* Base styles */
+body {
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+/* Typography */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+
+
+/* Card styles */
+.card {
+  transition: all 0.3s ease;
+  border: 1px solid var(--light-gray);
+}
+
+.card:hover,
+.hover-shadow:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 140, 186, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+/* Badge styles */
+.badge {
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.badge.bg-light {
+  border: 1px solid #dee2e6;
+}
+
+
+
+/* Form styles */
+.form-control-lg {
+  border-radius: 30px;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+  }
+}
+
+

@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block content %}
+<div class="container-fluid py-4">
+  <!-- Summary Cards -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-4">
+      <div class="card bg-primary text-white h-100 shadow">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Total Active Laybys</h5>
+          <h2 class="display-4 fw-bold mb-0">{{ dashboard_data.active_laybys_count }}</h2>
+          <p class="card-text mt-2">Last updated: {% now "M d, Y" %}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-success text-white h-100 shadow">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Total Paid (Last 30 Days)</h5>
+          <h2 class="display-4 fw-bold mb-0">R{{ dashboard_data.total_paid_last_30_days|floatformat:2 }}</h2>
+          <p class="card-text mt-2">Recent payments across all laybys</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-warning text-dark h-100 shadow">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Total Remaining Balance</h5>
+          <h2 class="display-4 fw-bold mb-0">R{{ dashboard_data.total_remaining_balance|floatformat:2 }}</h2>
+          <p class="card-text mt-2">Across all active laybys</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Layby Details -->
+  <div class="card" style="max-width: 600px;">
+    <div class="card-header bg-warning text-dark d-flex justify-content-between align-items-center">
+      <h5 class="mb-0">4 day week</h5>
+      <div>
+        <i class="bi bi-heart text-danger"></i>
+        <i class="bi bi-award text-primary ms-2"></i>
+      </div>
+    </div>
+    <div class="card-body bg-warning-subtle">
+      <h6 class="card-subtitle mb-2 text-muted">4 day week</h6>
+      <p class="card-text">4 Day Work Week Jobs - Remote Software Jobs 32hrs per week</p>
+      <p class="card-text">
+        <small class="text-muted">
+          <i class="bi bi-clock"></i> 3 years old &bull;
+          <i class="bi bi-people"></i> 2582 &bull;
+          <i class="bi bi-briefcase"></i> Latest jobs 200
+        </small>
+      </p>
+      <div class="bg-light p-3 rounded">
+        <p class="card-text">The place to find software jobs with a better work-life balance. For software engineers, product managers, designers and marketing executives.</p>
+        <i class="bi bi-stars float-end"></i>
+      </div>
+      <div class="mt-3">
+        <span class="badge bg-secondary me-1"><i class="bi bi-people"></i> All types of roles including engi...</span>
+        <span class="badge bg-secondary me-1"><i class="bi bi-journal-text"></i> Blog about Remote Jobs and Workin...</span>
+        <span class="badge bg-secondary"><i class="bi bi-globe"></i> Remote jobs only</span>
+      </div>
+      <div class="mt-2">
+        <span class="badge bg-secondary me-1"><i class="bi bi-brightness-high"></i> Light/no meetings</span>
+        <span class="badge bg-secondary me-1"><i class="bi bi-briefcase"></i> Latest job openings from forward...</span>
+        <span class="badge bg-secondary me-1"><i class="bi bi-list-check"></i> With Jobs Listing</span>
+        <span class="badge bg-secondary"><i class="bi bi-calendar4-week"></i> 4 day week jobs</span>
+      </div>
+      <div class="mt-2">
+        <span class="badge bg-secondary"><i class="bi bi-building"></i> In-depth company profiles</span>
+      </div>
+    </div>
+    <div class="card-footer bg-warning-subtle text-muted d-flex justify-content-between align-items-center">
+      <small>Sponsored</small>
+      <div>
+        <i class="bi bi-star-fill text-warning"></i>
+        <span>2.9</span>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div class="row g-2">
+      <div class="col-auto">
+        <button class="btn btn-outline-success btn-sm rounded-pill">
+          <i class="bi bi-globe"></i> Remote Jobs
+        </button>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-outline-warning btn-sm rounded-pill">
+          <i class="bi bi-star-fill"></i> Entry level
+        </button>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-outline-secondary btn-sm rounded-pill">
+          <i class="bi bi-mortarboard"></i> No degree required
+        </button>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-outline-info btn-sm rounded-pill">
+          <i class="bi bi-briefcase"></i> Internships
+        </button>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-outline-success btn-sm rounded-pill">
+          <i class="bi bi-house"></i> Remote jobs only
+        </button>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-outline-warning btn-sm rounded-pill">
+          <i class="bi bi-laptop"></i> Frontend jobs only
+        </button>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-outline-primary btn-sm rounded-pill">
+          <i class="bi bi-pencil"></i> Content Writing
+        </button>
+      </div>
+      <!-- Add more buttons for the remaining filters -->
+    </div>
+  </div>
+</div>
+{% endblock content %}

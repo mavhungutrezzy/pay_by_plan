@@ -1,0 +1,10 @@
+Layby Created Successfully!
+
+Your layby has been set up. Here are the details:
+
+Store: {layby.shop_name}
+Item: {layby.item_description}
+Total Cost: ${layby.total_cost}
+Start Date: {layby.start_date}
+
+You're all set! Payments will be processed according to the plan. Enjoy the anticipation of your new purchase!

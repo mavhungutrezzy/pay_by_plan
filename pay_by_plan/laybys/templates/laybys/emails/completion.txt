@@ -1,0 +1,7 @@
+Congratulations! Your layby is now fully paid off. Here are the details of your purchase:
+
+- Store: {layby.shop_name}
+- Item: {layby.item_description}
+- Total Paid: ${layby.total_cost}
+
+Enjoy your new purchase!
