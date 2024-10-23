@@ -1,4 +1,5 @@
 from django.utils import timezone
+from drf_spectacular.utils import extend_schema
 from reminders.models import Notification
 from reminders.models import Reminder
 from reminders.tasks import process_reminders_manual
@@ -14,6 +15,7 @@ from .serializers import ReminderSerializer
 from .serializers import ReminderUpdateSerializer
 
 
+@extend_schema(tags=["reminders"])
 class ReminderViewSet(viewsets.ModelViewSet):
     """
     ViewSet for managing reminders and notifications.
@@ -91,6 +93,7 @@ class ReminderViewSet(viewsets.ModelViewSet):
         return Response({"next_reminder_date": reminder.next_reminder_date})
 
 
+@extend_schema(tags=["notifications"])
 class NotificationViewSet(viewsets.ReadOnlyModelViewSet):
     """
     ViewSet for viewing notification history.

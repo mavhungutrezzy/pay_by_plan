@@ -332,10 +332,17 @@ REST_FRAMEWORK = {
 # Spectacular
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Pay By Plan API",
-    "DESCRIPTION": "API documentation for Pay By Plan",
+    "TITLE": "Layby API",
+    "DESCRIPTION": "API for managing laybys, payments, and reminders",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
+    "TAGS": [
+        {"name": "dashboard", "description": "Dashboard operations"},
+        {"name": "laybys", "description": "Layby management"},
+        {"name": "payments", "description": "Payment operations"},
+        {"name": "reminders", "description": "Reminder system"},
+        {"name": "notifications", "description": "Notification management"},
+    ],
 }
 
 

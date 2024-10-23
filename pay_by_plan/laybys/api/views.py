@@ -1,6 +1,7 @@
 from django.db.models import QuerySet
 from django.utils import timezone
 from django_filters.rest_framework import DjangoFilterBackend
+from drf_spectacular.utils import extend_schema
 from laybys.filters import LaybyFilter
 from laybys.models import Layby
 from laybys.services import LaybyService
@@ -18,6 +19,7 @@ from .serializers import LaybySerializer
 from .serializers import LaybyUpdateSerializer
 
 
+@extend_schema(tags=["laybys"])
 class LaybyViewSet(viewsets.ModelViewSet):
     """
     ViewSet for managing laybys.

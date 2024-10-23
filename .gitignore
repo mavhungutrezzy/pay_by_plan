@@ -189,10 +189,12 @@ $RECYCLE.BIN/
 *.lnk
 
 
+
 ### macOS template
 # General
 *.DS_Store
 .AppleDouble
+.vscode
 .LSOverride
 
 # Icon must end with two \r

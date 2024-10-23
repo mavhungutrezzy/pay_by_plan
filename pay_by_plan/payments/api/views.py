@@ -1,3 +1,4 @@
+from drf_spectacular.utils import extend_schema
 from laybys.models import Layby
 from payments.services import PaymentService
 from rest_framework import status
@@ -9,6 +10,7 @@ from rest_framework.response import Response
 from pay_by_plan.payments.api.serializers import PaymentSerializer
 
 
+@extend_schema(tags=["payments"])
 class PaymentViewSet(viewsets.ModelViewSet):
     """
     ViewSet for managing payments.

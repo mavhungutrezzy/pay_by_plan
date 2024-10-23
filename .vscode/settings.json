@@ -2,5 +2,6 @@
     "cSpell.words": [
         "djhuey",
         "whitenoise"
-    ]
+    ],
+    "files.autoSave": "afterDelay"
 }
